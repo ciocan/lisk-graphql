@@ -1,0 +1,27 @@
+type TransactionData {
+  id: String
+  blockid: String
+  type: String
+  timestamp: String
+  amount: String
+  fee: String
+  senderId: String
+  recipientId: String
+  senderPublicKey: String
+  signature: String
+  asset: String
+  confirmations: Int
+}
+
+type Transaction {
+  success: Boolean
+  error: String
+  transaction: TransactionData
+}
+
+type Transactions {
+  success: Boolean
+  error: String
+  transactions: [TransactionData]
+  count: String
+}

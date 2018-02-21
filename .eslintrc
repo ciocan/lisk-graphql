@@ -1,0 +1,40 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "extends": ["airbnb",
+                "eslint:recommended",
+                "plugin:import/errors",
+                "plugin:import/warnings"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "ga": true
+  },
+  "plugins": [
+    "import",
+    "class-property"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+        "comma-dangle": 0,
+        "max-len": [1, {"code": 120}],
+        "indent": [2, 2, {"SwitchCase": 1}],
+        "no-unused-vars": [2, { "ignoreRestSiblings": true }],
+        "global-require": 0,
+        "import/no-unresolved": [0, {"commonjs": true, "amd": true}],
+        "import/no-extraneous-dependencies": [0],
+        "import/extensions": [0],
+        "import/first": [0],
+        "import/newline-after-import": [0],
+        "import/prefer-default-export": [0]
+  }
+}

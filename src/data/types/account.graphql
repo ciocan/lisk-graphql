@@ -1,0 +1,50 @@
+type Balance {
+  success: Boolean
+  balance: Float
+  unconfirmedBalance: Float
+  error: String
+}
+
+type Account {
+  success: String
+  error: String
+  address: String
+  unconfirmedBalance: Float
+  balance: Float
+  publicKey: String
+  unconfirmedSignature: String
+  secondSignature: String
+  secondPublicKey: String
+  multisignatures: [String]
+  u_multisignatures: [String]
+}
+
+type TopAccounts {
+  success: Boolean
+  error: String
+  accounts: [TopAcount]
+}
+
+type TopAcount {
+  address: String
+  balance: Float
+  publicKey: String
+}
+
+type Delegates {
+  success: Boolean
+  error: String
+  delegates: [Delegate]
+}
+
+type Delegate {
+  username: String
+  address: String
+  publicKey: String
+  vote: String
+  producedblocks: Float
+  missedblocks: Float
+  rate: Float
+  approval: Float
+  productivity: Float
+}

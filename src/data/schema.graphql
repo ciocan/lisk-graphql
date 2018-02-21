@@ -1,0 +1,15 @@
+# import Balance from "./types/account.graphql"
+# import Account from "./types/account.graphql"
+# import TopAccounts from "./types/account.graphql"
+# import Delegates from "./types/account.graphql"
+# import Transaction from "./types/transaction.graphql"
+# import Transactions from "./types/transaction.graphql"
+
+type Query {
+  getBalance(address: String): Balance
+  getAccount(address: String): Account
+  getTopAccounts: TopAccounts
+  getDelegates(address: String): Delegates
+  getTransaction(id: String): Transaction
+  getTransactions(limit: String): Transactions
+}

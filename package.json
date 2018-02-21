@@ -1,0 +1,55 @@
+{
+  "name": "lisk-graphql",
+  "version": "0.1.0",
+  "description": "Lisk GraphQL NodeJS Server",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js --exec babel-node -e js",
+    "lint": "eslint ."
+  },
+  "author": "Radu Ciocan",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.24.1",
+    "graphql": "^0.12.3",
+    "graphql-import": "^0.4.1",
+    "graphql-yoga": "^1.2.0",
+    "node-fetch": "^1.7.3",
+    "nodemon": "^1.14.11"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "static-fs",
+      "babel-plugin-inline-import",
+      "transform-object-rest-spread"
+    ]
+  },
+  "now": {
+    "alias": "lisk-graphql"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-plugin-static-fs": "^1.1.0",
+    "babel-plugin-transform-async-generator-functions": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-class-property": "^1.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jasmine": "^2.9.1"
+  },
+  "resolutions": {
+    "graphql": "^0.12.3" 
+  }
+}
